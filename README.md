@@ -1,5 +1,6 @@
 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
 
+## initial set up project 
 pip3 install django
 
 django-admin startproject boutique_ado .
@@ -15,13 +16,56 @@ python3 manage.py migrate
 python3 manage.py createsuperuser
 
 git status 
-git commit -m""
+git add .
+git commit -m "initial commit"
 git push
 
+##Allauth Setup 1
+pip3 install django-allauth
 
+go to settings to grab the documentation:
+https://django-allauth.readthedocs.io/en/latest/installation.html
 
+https://django-allauth.readthedocs.io/en/latest/installation.html
 
+check the templates docs UP TO DATE OTHER WISE COPY/PASTE IN YOUR SETTINGS.
+then add the following to your settings immediately below the templates
 
+- `
+THEN add the following apps in installed apps [] section below the other apps:
+
+-
+
+update migrations
+`python3 manage.py migrate`
+
+`python3 manage.py runserver`
+-
+##Log in to admin in the browser
+go to admin and log in with your username and password.
+go to the domain site name and change to new name. then log out.
+log out of the browser ctrl + C
+
+-add '/' to accounts path in the `urls.py patterns` so that the path is properly generated.
+
+##Log emails into the console by going to settings.py
+add the following:
+    """
+`SITE_ID = 1
+
+`EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'`
+
+WSGI_APPLICATION = 'boutique_ado.wsgi.application'`
+
+    """
+test by going python.py manage.py runserver
+go to url and add `/accounts/login` at the end of the browser
+test the username by logging in and it should redirect to `verify your email address` page.
+
+`pip3 freeze > requirements.txt`
+
+`mkdir templates`
+`mkdir templates/allauth`
 
 
 

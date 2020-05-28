@@ -3,6 +3,12 @@
 ## initial set up project 
 pip3 install django
 
+`cd /workspace/.pip-modules/lib/python3.8/site-packages/`
+ `ls -la` 
+ - to view list of site packages
+
+ - use a shortcut `cd -` to get back to the last directory that we were working in.
+
 django-admin startproject boutique_ado .
 
 touch .gitignore
@@ -67,6 +73,7 @@ test the username by logging in and it should redirect to `verify your email add
 `mkdir templates`
 `mkdir templates/allauth`
 
+`cp -r ../.pip-modules/lib/python3.8/site-packages/allauth/templates/* ./templates/allauth/`
 
 
 

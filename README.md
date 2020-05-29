@@ -85,9 +85,16 @@ test the username by logging in and it should redirect to `verify your email add
 -  move the scripts from the bottom to the top
 
     """
+- git commit -m ""
 
-
-
+- simple base template now. And that's going to act as the framework for our entire project.
+  lets organize everything in base templates into blocks.
+- So that when we extend this template, later on, we can replace chunks of it as needed.
+For example, 
+- lets wrap all this "meta" in a block meta.
+which will give the ability to replace or extend it in templates 
+that extend this base.
+- lets do the same to CSS and the JavaScript, wrapping the CSS in a block corecss.
 
 
 

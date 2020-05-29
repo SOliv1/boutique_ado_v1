@@ -75,11 +75,16 @@ test the username by logging in and it should redirect to `verify your email add
 
 `cp -r ../.pip-modules/lib/python3.8/site-packages/allauth/templates/* ./templates/allauth/`
 
+- head over to `https://getbootstrap.com/` to download the boilerplate for bootstrap
 
+- go to documentation and on the first page you land on:
+-- copy and paste the starter template into your base.html
+    """
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+-  move the scripts from the bottom to the top
 
-
-
+    """
 
 
 

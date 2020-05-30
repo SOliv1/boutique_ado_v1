@@ -96,8 +96,12 @@ which will give the ability to replace or extend it in templates
 that extend this base.
 - lets do the same to CSS and the JavaScript, wrapping the CSS in a block corecss.
 
-
-
+- `git commit dash -m "add blocks to base template"`
+-   `python3 manage.py startapp home`
+- `mkdir -p home/templates/home`
+- add `home`, to installed apps in settings.py
+- add to backends 
+- startup the development server: `python3 manage.py runserver` 
 
 
 

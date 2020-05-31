@@ -116,10 +116,15 @@ it ignored these files below - have no idea where they came from but it  works n
 - css framework: https://bulma.io/  -  ensures that whenever we use font awesome icons.
 They will always stay perfectly centred and have a consistent size.
 
+- go to lato in google fonts and select for the css in base css.
+add `<link href="https://fonts.googleapis.com/css2?family=Lato:it.al,wght@0,100;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">`
+`<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">`
+to main core.css block.
 
+- go to font awesome account and sign in:`https://fontawesome.com/icons?d=gallery`
+`https://fontawesome.com/`
 
-
-
+- add kit code: `<script src="https://kit.fontawesome.com/1e03de6694.js" crossorigin="anonymous"></script>`
 
 
 

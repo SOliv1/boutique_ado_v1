@@ -109,7 +109,12 @@ it ignored these files below - have no idea where they came from but it  works n
 `core.Microsoft.Pytho.2803.1590767825`
 `core.Microsoft.Pytho.6042.159076802`
 
-- 
+- mkdir static
+- mkdir media
+- mkdir static/css
+
+- css framework: https://bulma.io/  -  ensures that whenever we use font awesome icons.
+They will always stay perfectly centred and have a consistent size.
 
 
 

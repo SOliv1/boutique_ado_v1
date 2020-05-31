@@ -126,7 +126,42 @@ to main core.css block.
 
 - add kit code: `<script src="https://kit.fontawesome.com/1e03de6694.js" crossorigin="anonymous"></script>`
 
+## Main site navigation
 
+- code paste in directly from the 'bootstrap navbar documentation'.
+
+- `mkdir templates/includes`
+- `main-nav.html`
+- `mobile-top-header.html`
+
+3 - list items 
+1.  will give us a button to open the `search bar`.
+1.  One to open the `My account drop-down menu`.
+1.  a.  And while we're at it let's get rid of this profile URL since we haven't created that one yet
+1.  And one to access the `shopping bag`.
+1.  At this point, you should pause the video
+    on each of these items to make sure that your code matches before moving on.
+1.  Now that the mobile version of the top portion of the header is complete.
+`.  Let's build main-nav.html.
+-   div with the classes, 
+    collapsed and navbar-collapse.
+    And I'lll give an id of main-nav which will match it up with the toggle button we
+    put into the base template.
+-   Inside the div goes a standard unordered list using the required class from bootstrap.
+-   As well as a couple to make it auto width and auto left and right margins.
+-   Again the shell of all this code comes from the bootstrap documentation
+-   so all we're doing is using that as the base and customizing it.
+-   Next, I'm going to paste in the first list item which will be the all products menu.
+-   As you can see this is pretty standard it's just a link that says all products.
+    Which triggers a drop-down of four other links
+- 3 more list items added:
+1,  clothing
+1.  homeware
+1.  special offers
+
+-   finish, save and include in base.html
+- add mobile views to base.html / run and test in browser
+## 
 
 
 

@@ -96,7 +96,6 @@ LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
 
-
 WSGI_APPLICATION = 'boutique_ado.wsgi.application'
 
 

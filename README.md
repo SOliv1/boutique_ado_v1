@@ -101,11 +101,15 @@ that extend this base.
 - `mkdir -p home/templates/home`
 - add `home`, to installed apps in settings.py
 - add to backends 
-- startup the development server: `python3 manage.py runserver` 
+- startup the development server: `python3 manage.py runserver`
 
+*pre-receive hook declined:*
+- found large files on my workspace and could not push to github. What you need to do is `.gitignore` them in the future if you should ever find them again.
+it ignored these files below - have no idea where they came from but it  works now thank goodness. 
+`core.Microsoft.Pytho.2803.1590767825`
+`core.Microsoft.Pytho.6042.159076802`
 
-
-
+- 
 
 
 

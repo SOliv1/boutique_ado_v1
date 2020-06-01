@@ -1,5 +1,76 @@
+page 2/
+## Main site navigation
+
+- code paste in directly from the 'bootstrap navbar documentation'.
+
+- `mkdir templates/includes`
+- `main-nav.html`
+- `mobile-top-header.html`
+
+3 - list items 
+1.  will give us a button to open the `search bar`.
+1.  One to open the `My account drop-down menu`.
+1.  a.  And while we're at it let's get rid of this profile URL since we haven't created that one yet
+1.  And one to access the `shopping bag`.
+1.  At this point, you should pause the video
+    on each of these items to make sure that your code matches before moving on.
+1.  Now that the mobile version of the top portion of the header is complete.
+`.  Let's build main-nav.html.
+-   div with the classes, 
+    collapsed and navbar-collapse.
+    And I'lll give an id of main-nav which will match it up with the toggle button we
+    put into the base template.
+-   Inside the div goes a standard unordered list using the required class from bootstrap.
+-   As well as a couple to make it auto width and auto left and right margins.
+-   Again the shell of all this code comes from the bootstrap documentation
+-   so all we're doing is using that as the base and customizing it.
+-   Next, I'm going to paste in the first list item which will be the all products menu.
+-   As you can see this is pretty standard it's just a link that says all products.
+    Which triggers a drop-down of four other links
+- 3 more list items added:
+1,  clothing
+1.  homeware
+1.  special offers
+-   finish, save and include in base.html
+- add mobile views to base.html / run and test in browser
+## Adding products
+`python3 manage.py startapp products`
+Add to installed apps in settings.py
+`mkdir products/fixtures`
+
+Add categories and products json
+`https://jsonformatter.org/ `
+to validate
+
+Go to models.py and add code There - `python3 manage.py makemigrations --dry-r`
+dry run 
+-   `pip3 install pillow`
+- dry run again...
+- `python3 manage.py migrate --plan`
+- `python3 manage.py makemigrations`
+-  `python3 manage.py migrate`
+    *then*...
+-`python3 manage.py loaddata categories`
+`python3 manage.py loaddata products`
+
+check it out - python3 manage.py runserver - go to admin
+
+## peoducts admin
+
+`mkdir -p products/templates/products`
+
+file = `products.html`
+
+ -     we're creating that inner products directory to make
+        sure that django knows which app these templates belong to.
+        In case any of them end up having the same names as other templates.
+        And let's now create a products.html inside that directory.
+        And copy the content of the home template in as a shell.
+        The products template will still extend base.html
+        And will still require static files as well as the page header
 
 
+`python3 manage.py runserver`
 
 
 

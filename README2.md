@@ -80,6 +80,17 @@ parameter and return the template including the product, this will be
 almost identical to the *all products view* so I'll copy that as a base.
 
 
+## Shopping cart
+
+-   `python3 manage.py startapp bag`
+-   add to settings:
+    installed apps `bag`
+-   add `views.py` by copying and pasting the views from home and changing the wording to the appropriate views.
+-   create `urls.py` and add to the bag directory - copy and paste from home urls and add as appropriate urls code.
+-   And then include the `bag URLs` in the `project level URLs` file.
+-    head over to `base template`  Add the link to view the bag.
+-    head over to `mobile-top-header`  Add the link to view the bag in there too. 
+-    `python3 manage.py runserver`
 
 
 

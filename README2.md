@@ -55,7 +55,7 @@ dry run
 
 check it out - python3 manage.py runserver - go to admin
 
-## peoducts admin
+## products admin
 
 `mkdir -p products/templates/products`
 
@@ -71,6 +71,15 @@ file = `products.html`
 
 
 `python3 manage.py runserver`
+
+## Product Details
+Starting with main `nav.html` let's add url products for this link.
+And then we'll add the same here on the shop now button in `index.html`.
+To `create the product details page` we need a new `view` which will take the `product id` as a
+parameter and return the template including the product, this will be
+almost identical to the *all products view* so I'll copy that as a base.
+
+
 
 
 

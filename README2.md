@@ -92,6 +92,7 @@ almost identical to the *all products view* so I'll copy that as a base.
 -    head over to `mobile-top-header`  Add the link to view the bag in there too. 
 -    `python3 manage.py runserver`
 -   add `contexts.py`
+-   commit changes
 
 
 

@@ -1,4 +1,4 @@
-page 2/
+
 ## Main site navigation
 
 - code paste in directly from the 'bootstrap navbar documentation'.
@@ -15,7 +15,7 @@ page 2/
 1.  At this point, you should pause the video
     on each of these items to make sure that your code matches before moving on.
 1.  Now that the mobile version of the top portion of the header is complete.
-`.  Let's build main-nav.html.
+    Let's build main-nav.html.
 -   div with the classes, 
     collapsed and navbar-collapse.
     And I'lll give an id of main-nav which will match it up with the toggle button we
@@ -27,8 +27,8 @@ page 2/
 -   Next, I'm going to paste in the first list item which will be the all products menu.
 -   As you can see this is pretty standard it's just a link that says all products.
     Which triggers a drop-down of four other links
-- 3 more list items added:
-1,  clothing
+-    more list items added:
+1.  clothing
 1.  homeware
 1.  special offers
 -   finish, save and include in base.html
@@ -91,10 +91,34 @@ almost identical to the *all products view* so I'll copy that as a base.
 -    head over to `base template`  Add the link to view the bag.
 -    head over to `mobile-top-header`  Add the link to view the bag in there too. 
 -    `python3 manage.py runserver`
+-   add `contexts.py`
+-   commit changes
+
+-       alt + click to select mutltiple regions
+-  
+-   when making changes to the model make sure you do the following to check all is correct:
+    `python3 manage.py makemigrations --dry-run`
+
+    products/migrations/0002_auto_20200605_0009.py
+    - Change Meta options on category
+    - Add field has_sizes to product
+    The above report is technically a bug in django but because it is not critical developers have chosen not to fix it as it could cause other issues along the way.  So it is ok to go ahead and make migrations
+-   `python3 manage.py migrate --plan` to verify the migrations we are making
+-   and then `python3 manage.py migrate`
+-   `python3 manage.py shell`
+-   input into the shell for quick 'on the fly' without having to resort to your views.py 
+
+-   `from products.models import Product `
+-   `kdbb = ['kitchen_dining', 'bed_bath'] `
 
 
 
 
+
+
+
+
+------------------------//------------------------------------//
 
 Welcome Sara Oliver,
 

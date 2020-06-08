@@ -126,7 +126,6 @@ to main core.css block.
 - add kit code: `<script src="https://kit.fontawesome.com/1e03de6694.js" crossorigin="anonymous"></script>` -->
 
 ## Adding Products part5
-
 -   attach some plus and minus buttons to this input to make it easier to use on mobile.
 <!-- And also to align it more closely with our current black and white theme.
 To do this I can just use the built-in input group append
@@ -144,3 +143,24 @@ data item id and the id attribute itself. -->
     the end of the *product detail template*
     And this avoids having to deal with additional static files just for a single JavaScript file.
 -   Let's begin script to increment the quantity.
+## Adding Products part6
+        add the *quantity selector box* to the shopping bag pages quantity column.
+
+        replace this quantity in the *table with a form with a method of post*.
+        It won't have an action yet since we haven't created the *proper URLs or views*
+        but we'll get to that soon.
+        I'll give it a *class of update form and attach the csrf token since it'll be posting data*.
+        And from here it's as simple as copying the form group from the product detail
+        page and pasting it in.
+        And now we'll make a few changes to it.
+        -   First I'll get rid of the 50% width class.
+        -   Add some classes to make the icons buttons and input boxes a bit smaller.
+        -   And I'll remove the icon class here in the span element
+        -   which will allow Font awesomes fa-small class to handle the sizing.
+        -  nstead of the icon class we copied from Bulma in the beginning of this project.
+        -   need to update all the template variables that contain product.id to item.item_id
+            Also, let's change the value of the input box
+            to reflect the number of this item currently in the shopping bag.
+            Finally because there's no size selector box on this page.
+            We'll need to submit the size of the item the user wants to update or remove in a hidden input field.
+            If the product does in fact have sizes.

@@ -28,10 +28,10 @@ git push
 ##Allauth Setup 1
 pip3 install django-allauth
 
-go to settings to grab the documentation:
+<!-- go to settings to grab the documentation:
 https://django-allauth.readthedocs.io/en/latest/installation.html
 
-https://django-allauth.readthedocs.io/en/latest/installation.html
+https://django-allauth.readthedocs.io/en/latest/installation.html -->
 
 check the templates docs UP TO DATE OTHER WISE COPY/PASTE IN YOUR SETTINGS.
 then add the following to your settings immediately below the templates
@@ -102,17 +102,17 @@ that extend this base.
 - add to backends 
 - startup the development server: `python3 manage.py runserver`
 
-*pre-receive hook declined:*
+<!-- *pre-receive hook declined:*
 - found large files on my workspace and could not push to github. What you need to do is `.gitignore` them in the future if you should ever find them again.
 it ignored these files below - have no idea where they came from but it  works now thank goodness. 
 `core.Microsoft.Pytho.2803.1590767825`
-`core.Microsoft.Pytho.6042.159076802`
+`core.Microsoft.Pytho.6042.159076802` -->
 
 - mkdir static
 - mkdir media
 - mkdir static/css
 
-- css framework: https://bulma.io/  -  ensures that whenever we use font awesome icons.
+<!-- - css framework: https://bulma.io/  -  ensures that whenever we use font awesome icons.
 They will always stay perfectly centred and have a consistent size.
 
 - go to lato in google fonts and select for the css in base css.
@@ -123,8 +123,24 @@ to main core.css block.
 - go to font awesome account and sign in:`https://fontawesome.com/icons?d=gallery`
 `https://fontawesome.com/`
 
-- add kit code: `<script src="https://kit.fontawesome.com/1e03de6694.js" crossorigin="anonymous"></script>`
+- add kit code: `<script src="https://kit.fontawesome.com/1e03de6694.js" crossorigin="anonymous"></script>` -->
 
+## Adding Products part5
 
-
-
+-   attach some plus and minus buttons to this input to make it easier to use on mobile.
+<!-- And also to align it more closely with our current black and white theme.
+To do this I can just use the built-in input group append
+and input group prepend classes from bootstrap.
+And toss a couple of buttons in them with the appropriate font awesome icons.
+You'll see there are also a couple of extra attributes on these buttons.
+data item id and the id attribute itself. -->
+-   JavaScript handles updating the input box itself.
+    Since these buttons won't do anything by default.
+-   write that JavaScript right now.
+    do it in an *include* since we'll also use it on the shopping bag page in the next video.
+-    Create an includes directory in the products template folder.
+-   And then an *html file* which I'll call quantity_input_script.html
+    I'm doing this as an HTML file since it'll just be a script element we include at
+    the end of the *product detail template*
+    And this avoids having to deal with additional static files just for a single JavaScript file.
+-   Let's begin script to increment the quantity.

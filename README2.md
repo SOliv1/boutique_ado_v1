@@ -93,6 +93,7 @@ almost identical to the *all products view* so I'll copy that as a base.
 -    `python3 manage.py runserver`
 -   add `contexts.py`
 -   commit changes
+<<<<<<< HEAD
 
 -       alt + click to select mutltiple regions
 -  
@@ -111,6 +112,30 @@ almost identical to the *all products view* so I'll copy that as a base.
 -   `from products.models import Product `
 -   `kdbb = ['kitchen_dining', 'bed_bath'] `
 
+
+
+
+=======
+>>>>>>> fb8ab89c1e84657b66863ea252955670abad02d6
+
+-       alt + click to select mutltiple regions
+-  
+-   when making changes to the model make sure you do the following to check all is correct:
+    `python3 manage.py makemigrations --dry-run`
+
+    products/migrations/0002_auto_20200605_0009.py
+    - Change Meta options on category
+    - Add field has_sizes to product
+    The above report is technically a bug in django but because it is not critical developers have chosen not to fix it as it could cause other issues along the way.  So it is ok to go ahead and make migrations
+-   `python3 manage.py migrate --plan` to verify the migrations we are making
+-   and then `python3 manage.py migrate`
+-   `python3 manage.py shell`
+-   input into the shell for quick 'on the fly' without having to resort to your views.py 
+
+-   `from products.models import Product `
+-   `kdbb = ['kitchen_dining', 'bed_bath'] `
+
+------------------------//------------------------------------//
 
 
 

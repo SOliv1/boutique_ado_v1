@@ -79,7 +79,6 @@ To `create the product details page` we need a new `view` which will take the `p
 parameter and return the template including the product, this will be
 almost identical to the *all products view* so I'll copy that as a base.
 
-
 ## Shopping cart
 
 -   `python3 manage.py startapp bag`
@@ -93,7 +92,6 @@ almost identical to the *all products view* so I'll copy that as a base.
 -    `python3 manage.py runserver`
 -   add `contexts.py`
 -   commit changes
-<<<<<<< HEAD
 
 -       alt + click to select mutltiple regions
 -  
@@ -109,31 +107,74 @@ almost identical to the *all products view* so I'll copy that as a base.
 -   `python3 manage.py shell`
 -   input into the shell for quick 'on the fly' without having to resort to your views.py 
 
--   `from products.models import Product `
--   `kdbb = ['kitchen_dining', 'bed_bath'] `
-
-
-
-
-=======
->>>>>>> fb8ab89c1e84657b66863ea252955670abad02d6
-
--       alt + click to select mutltiple regions
--  
--   when making changes to the model make sure you do the following to check all is correct:
-    `python3 manage.py makemigrations --dry-run`
-
-    products/migrations/0002_auto_20200605_0009.py
-    - Change Meta options on category
-    - Add field has_sizes to product
-    The above report is technically a bug in django but because it is not critical developers have chosen not to fix it as it could cause other issues along the way.  So it is ok to go ahead and make migrations
--   `python3 manage.py migrate --plan` to verify the migrations we are making
--   and then `python3 manage.py migrate`
--   `python3 manage.py shell`
+-   
+    `python3 manage.py shell`
 -   input into the shell for quick 'on the fly' without having to resort to your views.py 
 
 -   `from products.models import Product `
 -   `kdbb = ['kitchen_dining', 'bed_bath'] `
+    `clothes = Product.objects.exclude(category__name__in=kdbb)`
+    `clothes.count()`
+    for item in clothes:
+    item.has_sizes = True
+    item.save()
+-   `Product.objects.filter(has_sizes = True)`
+-   `Product.objects.filter(has_sizes = True).count()`
+-   130
+-   exit()
+
+
+## Adding Products part5
+-   attach some plus and minus buttons to this input to make it easier to use on mobile.
+<!-- And also to align it more closely with our current black and white theme.
+To do this I can just use the built-in input group append
+and input group prepend classes from bootstrap.
+And toss a couple of buttons in them with the appropriate font awesome icons.
+You'll see there are also a couple of extra attributes on these buttons.
+data item id and the id attribute itself. -->
+-   JavaScript handles updating the input box itself.
+    Since these buttons won't do anything by default.
+-   write that JavaScript right now.
+    do it in an *include* since we'll also use it on the shopping bag page in the next video.
+-    Create an includes directory in the products template folder.
+-   And then an *html file* which I'll call quantity_input_script.html
+    I'm doing this as an HTML file since it'll just be a script element we include at
+    the end of the *product detail template*
+    And this avoids having to deal with additional static files just for a single JavaScript file.
+-   Let's begin script to increment the quantity.
+## Adding Products part6
+        add the *quantity selector box* to the shopping bag pages quantity column.
+
+        replace this quantity in the *table with a form with a method of post*.
+        It won't have an action yet since we haven't created the *proper URLs or views*
+        but we'll get to that soon.
+        I'll give it a *class of update form and attach the csrf token since it'll be posting data*.
+        And from here it's as simple as copying the form group from the product detail
+        page and pasting it in.
+        And now we'll make a few changes to it.
+        -   First I'll get rid of the 50% width class.
+        -   Add some classes to make the icons buttons and input boxes a bit smaller.
+        -   And I'll remove the icon class here in the span element
+        -   which will allow Font awesomes fa-small class to handle the sizing.
+        -  nstead of the icon class we copied from Bulma in the beginning of this project.
+        -   need to update all the template variables that contain product.id to item.item_id
+            Also, let's change the value of the input box
+            to reflect the number of this item currently in the shopping bag.
+            Finally because there's no size selector box on this page.
+            We'll need to submit the size of the item the user wants to update or remove in a hidden input field.
+            If the product does in fact have sizes.
+## Adjusting and Removing Products Part 1
+        Go to bag views and copy and paste for views in bag dir.  Adjust as required for the adjustment & removal of products
+    -   views.py
+    -   add URL for it
+    -`  shopping bag template submit item to the adjust bag view
+## Adjusting and Removing Products Part 2
+    -   get jquery code  in minified form here from codejquery.com
+    `       'https://code.jquery.com/'
+
+    -   *new folder in bag directory called templatetags/bags_tools.py*
+    -   
+    -  *new __init__.py new file to accompany the template/bags_too
 
 ------------------------//------------------------------------//
 
@@ -145,40 +186,3 @@ almost identical to the *all products view* so I'll copy that as a base.
 
 ------------------------//------------------------------------//
 
-Welcome Sara Oliver,
-
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: *Make Public*,
-
-Another blue button should appear to click: *Open Browser*.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: *Make Public*,
-
-Another blue button should appear to click: *Open Browser*.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!

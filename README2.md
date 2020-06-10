@@ -176,13 +176,6 @@ data item id and the id attribute itself. -->
     -   
     -  *new __init__.py new file to accompany the template/bags_too
 
-------------------------//------------------------------------//
-
-
-
-
-
-
-
-------------------------//------------------------------------//
+## Checkout
+-   `python3 manage.py startapp checkout`
 

@@ -177,7 +177,27 @@ data item id and the id attribute itself. -->
     -  *new __init__.py new file to accompany the template/bags_too
 
 ## Checkout
+
 -   `python3 manage.py startapp checkout`
 Add to the models.py in the checkout app and then dry run the applications to be created.
     `python3 manage.py makemigrations --dry-run`
+    then 
+     `python3 manage.py makemigrations`
+     then
+    `python3 manage.py migrate --plan`  to make sure we are not missing anything
+    then finally actually run them:
+    `python3 manage.py migrate`     
+    Let's commit these changes with git add .
+    git commit -m "created check out app and models"
+    git push
+
+## Create models
+Create models.py 
+
+## Admin, Signals & Forms Part 1
+Add to admin.py 
+first import the order and OrderLineItem models - check it out in the admin on site.
+Create signals.py in the same level as models.py in checkout.
+Update the apps.py in checkout.
+
 

@@ -178,4 +178,6 @@ data item id and the id attribute itself. -->
 
 ## Checkout
 -   `python3 manage.py startapp checkout`
+Add to the models.py in the checkout app and then dry run the applications to be created.
+    `python3 manage.py makemigrations --dry-run`
 

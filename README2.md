@@ -193,11 +193,26 @@ Add to the models.py in the checkout app and then dry run the applications to be
 
 ## Create models
 Create models.py 
-
 ## Admin, Signals & Forms Part 1
 Add to admin.py 
 first import the order and OrderLineItem models - check it out in the admin on site.
 Create signals.py in the same level as models.py in checkout.
-Update the apps.py in checkout.
+Update the apps.py in checkout. Then add . and  commit changes.
+## views and templates
+create views and save then create a new urls file by copying from home app and modifying it.
+go to product level urls and include check_out.urls.
+-create new `templates folder` and `checkout folder` inside it and `check_out.html` inside that.
+-then create css.  Add `static folder` inside `checkout app` then `check_out folder` inside that then finally a `check_out.css` inside that.
+install django crispy forms to format forms using  bootstrap styling forms automatically.
+`pip3 install django-crispy-forms`   
+    then add `crispy forms`, to our installed apps in 
+    `settings.py`, and tell it what template pack it is bootstratp4 in this case.
+    add a list called built-ins which will contain all
+    the tags we want available in all our templates by default.
+    from crispy_forms.template_tags we want to add both crispy_forms_tags
+    And crispy_forms_field.
+    Which will give us access to everything we need from crispy forms across all templates by default.
+    Then update `requriements.txt`
+    `pip3 freeze > requirements.txt`
 
-
+    Now with that done, render the form in the checkout template.

@@ -214,5 +214,18 @@ install django crispy forms to format forms using  bootstrap styling forms autom
     Which will give us access to everything we need from crispy forms across all templates by default.
     Then update `requriements.txt`
     `pip3 freeze > requirements.txt`
-
     Now with that done, render the form in the checkout template.
+ ## Stripe part 1
+ -  go to https://stripe.com/gb 
+    start now - create account and add email then go back and verify email in your account.
+    then continue to dashboard in your newly opened stripe account. Do not worry about activating account unless you are acception real payments in the future.
+    -   go to Stripe docs > then look for `accept payments` here in documentation and click on there.
+    -   first thing we need to do to set up stripe elements is to include `stripes javascript`.
+    -   then go to check_out.html and add at the bottom: 
+        {% block postloadjs %}
+            {{ block.super }}
+            {{ stripe_public_key|json_script:"id_stripe_public_key" }}    
+            {{ client_secret|json_script:"id_client_secret" }}
+        {% endblock %}
+    To show what these do - go to stripe and copy the public key.
+go to page / 3

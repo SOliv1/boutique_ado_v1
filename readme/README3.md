@@ -73,4 +73,10 @@ Go to:
         Add a *border* around the checkout_success.html - add summary to order checkout success page.
         add an *overlay* to checkout success page and then add to the checkout css page as well at the bottom
         Add a loading spinner in checkout.html
+        -   https://stripe.com/docs/payments/accept-a-payment#web-test-integration
+        -  second test card no. to trigger the overlay spinner:- 4000002500003155
+        -   to test the integrations for stripe payments and the spinner overlay.
+## Stripes Part 10 & 11
+        - Create webhook_handler.py then import `from django.http import HttpResponse`
+        
         

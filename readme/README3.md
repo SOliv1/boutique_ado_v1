@@ -16,7 +16,7 @@ Go to:
   - update views.py in checkout with stripe card elemaents and then install `pip3 install stripe`
   - export environment variables
   
-        export STRIPE_PUBLIC_KEYm=pk_test_51GtAGjDvyPDUJbikVWyYOumfWpQlZdzXnhDKRPPeNvSX0RTApmHnUmOvnsgpHwaqoUUp5ekqlKl8xxHlcFyKKvVT00WWP5gmouy value
+        export STRIPE_PUBLIC_KEYm=pk_test_51GtAGjDvyPDUJbikVWyYOumfWpQlZdzXnhDKRPPeNvSX0RTApmHnUmOvnsgpHwaqoUUp5ekqlKl8xxHlcFyKKvVT00WWP5gmouy 
         export STRIPE_SECRET_KEY=sk_test_51GtAGjDvyPDUJbikpwurphl2orPFN3yLUIWg7GhBxnGFoyPtIhS1RjlSldLJjsItel7d2OWONC3Yj8uPudKqXpmS00hqKMIbtF
   - 
   if not using gitpod you may need to look up the instructions on setting environemt variables called set on windows for your specific situation.
@@ -54,4 +54,9 @@ Go to:
         by adding or zero to the end of this line that aggregates all the line item totals.
         This will prevent an error if we manually delete all the line items from an order
         by making sure that this sets the order total to zero instead of none.
-            test card no = 4242424242424242
+    -   add credentials again:
+            export STRIPE_PUBLIC_KEYm=pk_test_51GtAGjDvyPDUJbikVWyYOumfWpQlZdzXnhDKRPPeNvSX0RTApmHnUmOvnsgpHwaqoUUp5ekqlKl8xxHlcFyKKvVT00WWP5gmouy 
+            export STRIPE_SECRET_KEY=sk_test_51GtAGjDvyPDUJbikpwurphl2orPFN3yLUIWg7GhBxnGFoyPtIhS1RjlSldLJjsItel7d2OWONC3Yj8uPudKqXpmS00hqKMIbtF
+
+                test card no = 
+                4242424242424242

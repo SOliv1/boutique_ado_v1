@@ -47,6 +47,15 @@ Go to:
         Create checkout/views.py continue success orderform
         add to checkout/urls.py success
 ## Stripes Part 7
+        Make sure you add env.py to your project so that the Stripe card system works and that it is secure.
+        
+        import os
+
+        os.environ.setdefault("STRIPE_PUBLIC_KEY", 'pk_test_')
+
+    
+        os.environ.setdefault("STRIPE_SECRET_KEY", 'sk_test_')
+        
         Create success template along side of checkout.html template
         Go to init-_py and add details to that
             *default_app_config = 'checkout.apps.CheckoutConfig'*
@@ -60,3 +69,5 @@ Go to:
 
                 test card no = 
                 4242424242424242
+## Stripes Part 8
+        Add a border around the checkout_success.html 

@@ -69,5 +69,8 @@ Go to:
 
                 test card no = 
                 4242424242424242
-## Stripes Part 8
-        Add a border around the checkout_success.html 
+## Stripes Part 8 & 9
+        Add a *border* around the checkout_success.html - add summary to order checkout success page.
+        add an *overlay* to checkout success page and then add to the checkout css page as well at the bottom
+        Add a loading spinner in checkout.html
+        

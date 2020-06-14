@@ -76,7 +76,8 @@ Go to:
         -   https://stripe.com/docs/payments/accept-a-payment#web-test-integration
         -  second test card no. to trigger the overlay spinner:- 4000002500003155
         -   to test the integrations for stripe payments and the spinner overlay.
-## Stripes Part 10 & 11
-        - Create webhook_handler.py then import `from django.http import HttpResponse`
-        
+## Stripes Part 10 & 11 & 12
+        - Create webhook_handler.py then import `from django.http import HttpResponse` add code.
+        - These instances of webhook can be changed and modified by names and the directory and methods with each new project and update.
+
         

@@ -74,10 +74,50 @@ Go to:
         add an *overlay* to checkout success page and then add to the checkout css page as well at the bottom
         Add a loading spinner in checkout.html
         -   https://stripe.com/docs/payments/accept-a-payment#web-test-integration
-        -  second test card no. to trigger the overlay spinner:- 4000002500003155
+
+        -  second test card no. to trigger the overlay spinner:- 
+            test card spinner:- 4000002500003155
         -   to test the integrations for stripe payments and the spinner overlay.
 ## Stripes Part 10 & 11 & 12
         - Create webhook_handler.py then import `from django.http import HttpResponse` add code.
         - These instances of webhook can be changed and modified by names and the directory and methods with each new project and update.
+        - add to checkout urls
+        - create webhooks.py and get the code directly from stripe add a few moderations
+                https://stripe.com/docs/payments/handling-payment-events
+                Triggering actions with webhooks
+                    How to use webhooks to respond to offline payment events.
+                    save and go to *settings.py* and add new environment variable
+                    `STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')`
+                    to confirm it is working print('success!') in webhooks.py
+                        print('success!')
+                        returnHttpResponse(status=200)
+               set up the stripe API key.
+                set up the stripe API key.
+                And the webhook secret which will be used to verify that the webhook actually came from stripe.
+                And we'll need a few imports.
+                We'll need our settings file to get the webhook and the stripe API secrets.
+                We need HttpResponse so these exception handlers will work.
+                We'll need our webhook handler class and of course stripe.
+                And last we need two decorators require_post which as the name implies will make
+                this view require a post request and will reject get requests.
+                And CSRF exempt since stripe won't send a CSRF token like we'd normally need.
+                Let's save that for now and head to settings.py
+                And I'll add a new environment variable called stripe webhook secret
+                which we'll get from stripe in a moment.
+                To confirm the webhook view is working. Let's just print out success and then return a 200 response.
+                To connect the URL, first we need to run the server in order to get the address of our site.
+                I'll copy that and then go to the stripe dashboard.
+                On the Left, I'll click developers.
+                Then find webhooks.
+                And select add endpoint.
+                Now I'll paste in the URL and add /checkout/wh onto the end.
+                Making sure to include the trailing slash.
+                Click receive all events and then click add endpoint.
+                This opens up the details of our new webhook endpoint.
+            -   Get the signing secret.  go back to workspace and export:
+                export STRIPE_WH_SECRET='whse....'
+                restart the terminal
+                then go back to stripe and test the webhook and if successful it should be seen in the terminal as a 200 checkout 
+
 
         

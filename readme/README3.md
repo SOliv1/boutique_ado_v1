@@ -118,6 +118,7 @@ Go to:
                 export STRIPE_WH_SECRET='whse....'
                 restart the terminal
                 then go back to stripe and test the webhook and if successful it should be seen in the terminal as a 200 checkout 
+                
 
 
         

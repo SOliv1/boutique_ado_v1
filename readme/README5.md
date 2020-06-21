@@ -48,3 +48,16 @@
             - then delele the accounts/logout then add profiles to the browser to see the user profile page
             - commit changes - add profile app
 # Profile App - Part 3
+-   It'll be split into two text files in the *checkout apps* templates folder:
+-   add a new folder in `checkout/templates/confirmation_emails` and inside that `confirmation_email_body.txt`
+                        `confirmation_email_subject.txt`
+
+-  Head over to webhook.handler and write a new private method called _send_confirmation_email
+        -  send mail function from django.core. mail
+        -    we'll need render_to_string from django.template.loader
+        -   And also our settings file from django.conf
+        -   With these imported, it's easy to send an email.
+        -   Let's get the customers email from the order and store it in a variable.
+        -   Then we can use the render_to_string method to render both the files we just created two strings
+        -   add the DEFAULT_FROM_EMAIL to *settings.py*
+        -   test it all out by making a purchase - `python3 manage.py runserver`

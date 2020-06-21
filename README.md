@@ -1,32 +1,32 @@
 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
 
 ## initial set up project 
-pip3 install django
+`pip3 install django`
 cd /workspace/.pip-modules/lib/python3.8/site-packages/`
  `ls -la` 
  - to view list of site packages
 
  - use a shortcut `cd -` to get back to the last directory that we were working in.
 
-django-admin startproject boutique_ado .
+`django-admin startproject boutique_ado .`
 
-touch .gitignore
+`touch .gitignore`
 
-python3 manage.py runserver
+`python3 manage.py runserver`
 
 exit out Ctrl + C
 
-python3 manage.py migrate
+`python3 manage.py migrate`
 
-python3 manage.py createsuperuser
+`python3 manage.py createsuperuser`
 
 git status 
 git add .
 git commit -m "initial commit"
 git push
 
-##Allauth Setup 1
-pip3 install django-allauth
+## Allauth Setup 1
+`pip3 install django-allauth`
 
 <!-- go to settings to grab the documentation:
 https://django-allauth.readthedocs.io/en/latest/installation.html

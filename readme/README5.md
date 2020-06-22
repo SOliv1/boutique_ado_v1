@@ -82,13 +82,9 @@
     -   Update *models.py* in profile app. Then refresh and test in browser. *Tip = Use alt + up/down arrows to move lines up or down*
     -   With that resolved let's make sure that the profile forms placeholders are all colored correctly.
     And to do that I'll just grab the *CSS from the search box*. And change the selector.
-
-
-
 -   It'll be split into two text files in the *checkout apps* templates folder:
 -   add a new folder in `checkout/templates/confirmation_emails` and inside that `confirmation_email_body.txt`
                         `confirmation_email_subject.txt`
-
 -  Head over to webhook.handler and write a new private method called _send_confirmation_email
         -  send mail function from django.core. mail
         -    we'll need render_to_string from django.template.loader
@@ -98,3 +94,11 @@
         -   Then we can use the render_to_string method to render both the files we just created two strings
         -   add the DEFAULT_FROM_EMAIL to *settings.py*
         -   test it all out by making a purchase - `python3 manage.py runserver`
+        -   add jquery (js/folder/countryfield.js) to profiles/static/profiles
+        -   update toasts_success.html in line with the profiles success page
+        -   update views.py and import messages
+# Profile App - Part 7 & 8
+
+# Profile App - Part 9 & 10
+# Profile App - Part 11 & 12
+# Profile App - Part 13 & 14

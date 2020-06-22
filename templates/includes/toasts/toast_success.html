@@ -1,4 +1,4 @@
- <div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
+<div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
     <div class="arrow-up arrow-success"></div>
     <div class="w-100 toast-capper bg-success"></div>
     <div class="toast-header bg-white text-dark">
@@ -20,11 +20,7 @@
                 {% for item in bag_items %}
                     <div class="row">
                         <div class="col-3 my-1">
-                            {% if item.product.image %}
-                            <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
-                            {% else %}
-                            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
-                            {% endif %}
+                            <img class="w-100" src="{{ item.product.image.url }}">
                         </div>
                         <div class="col-9">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
@@ -56,4 +52,3 @@
         {% endif %}
     </div>
 </div>
-

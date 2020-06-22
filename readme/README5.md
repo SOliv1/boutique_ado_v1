@@ -47,7 +47,37 @@
             - go to checkout - delete checkout in browser and as you are logged in as admin you need to logout.
             - then delele the accounts/logout then add profiles to the browser to see the user profile page
             - commit changes - add profile app
-# Profile App - Part 3
+# Profile App - Part 3 & 4
+ -  Update *allauth base.html*
+ -  Update *accounts base.html*
+ -  Update all the templates in the *accounts folder*
+ -  Update the *base.css* to match all the other templates
+    By the way, you could also do this by adding the BTN or text info
+        or whatever other bootstrap classes you wanted to all the elements in the allauth templates
+        But since there's a lot of templates it's faster to just copy the styles
+        and apply them globally via the CSS here.
+        That's another reason I added the allauth inner content div as it gives us a way to isolate all the forms
+        in all the allauth templates and apply CSS to them.
+-   Now if I try to log in you'll see it won't let me anymore since I have no user profile.
+        That's because the signal in the profiles app is picking up that my user name isn't new
+        so it's trying to save my profile which doesn't exist.
+        -    comment out the signal in profiles/models.py to login presently
+    # if created:
+    UserProfile.objects.create(user=instance)
+    # Existing users: just save the profile
+    # instance.userprofile.save()
+        once in just set back to the way it was
+-       The last thing I'll do just to prove that profiles are working correctly is to update the link
+        in the base template to point at the profile url.
+-   Then go to our profiles views.py and Import the user profile model
+        Get the profile for the current user. And then return it to the template.
+        Then in the template, just render the profile.
+        And we'll see the user name printed out
+
+
+
+
+
 -   It'll be split into two text files in the *checkout apps* templates folder:
 -   add a new folder in `checkout/templates/confirmation_emails` and inside that `confirmation_email_body.txt`
                         `confirmation_email_subject.txt`

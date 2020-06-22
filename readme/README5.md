@@ -73,9 +73,15 @@
 -   Then go to our profiles views.py and Import the user profile model
         Get the profile for the current user. And then return it to the template.
         Then in the template, just render the profile.
-        And we'll see the user name printed out and test
-
-
+        And we'll see the user name printed out and test out in webbrowser
+# Profile App - Part 5 & 6
+-   Begin by copying the *checkout apps forms.py* into the *profiles app*
+    -   Let's now go to the profile *views.py* import the form
+    -   Populate it with the user's current profile information
+    -   And return it to the template - render form in *profile.html*
+    -   Update *models.py* in profile app. Then refresh and test in browser. *Tip = Use alt + up/down arrows to move lines up or down*
+    -   With that resolved let's make sure that the profile forms placeholders are all colored correctly.
+    And to do that I'll just grab the *CSS from the search box*. And change the selector.
 
 
 

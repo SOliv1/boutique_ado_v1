@@ -69,10 +69,11 @@
         once in just set back to the way it was
 -       The last thing I'll do just to prove that profiles are working correctly is to update the link
         in the base template to point at the profile url.
+    -   Create profiles/profile.html in profiles/templates
 -   Then go to our profiles views.py and Import the user profile model
         Get the profile for the current user. And then return it to the template.
         Then in the template, just render the profile.
-        And we'll see the user name printed out
+        And we'll see the user name printed out and test
 
 
 

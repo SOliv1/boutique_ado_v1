@@ -73,16 +73,18 @@
 -   Then go to our profiles views.py and Import the user profile model
         Get the profile for the current user. And then return it to the template.
         Then in the template, just render the profile.
-        And we'll see the user name printed out and test
-
-
-
-
-
+        And we'll see the user name printed out and test out in webbrowser
+# Profile App - Part 5 & 6
+-   Begin by copying the *checkout apps forms.py* into the *profiles app*
+    -   Let's now go to the profile *views.py* import the form
+    -   Populate it with the user's current profile information
+    -   And return it to the template - render form in *profile.html*
+    -   Update *models.py* in profile app. Then refresh and test in browser. *Tip = Use alt + up/down arrows to move lines up or down*
+    -   With that resolved let's make sure that the profile forms placeholders are all colored correctly.
+    And to do that I'll just grab the *CSS from the search box*. And change the selector.
 -   It'll be split into two text files in the *checkout apps* templates folder:
 -   add a new folder in `checkout/templates/confirmation_emails` and inside that `confirmation_email_body.txt`
                         `confirmation_email_subject.txt`
-
 -  Head over to webhook.handler and write a new private method called _send_confirmation_email
         -  send mail function from django.core. mail
         -    we'll need render_to_string from django.template.loader
@@ -92,3 +94,11 @@
         -   Then we can use the render_to_string method to render both the files we just created two strings
         -   add the DEFAULT_FROM_EMAIL to *settings.py*
         -   test it all out by making a purchase - `python3 manage.py runserver`
+        -   add jquery (js/folder/countryfield.js) to profiles/static/profiles
+        -   update toasts_success.html in line with the profiles success page
+        -   update views.py and import messages
+# Profile App - Part 7 & 8
+
+# Profile App - Part 9 & 10
+# Profile App - Part 11 & 12
+# Profile App - Part 13 & 14

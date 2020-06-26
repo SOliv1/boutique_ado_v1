@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
@@ -5,6 +6,13 @@ from django.conf import settings
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
+=======
+from django.shortcuts import render, get_object_or_404
+from django.contrib import messages
+
+from .models import UserProfile
+from .forms import UserProfileForm
+>>>>>>> 384bd3250c81a51072fc19b48f90df312af56a99
 
 from products.models import Product
 from profiles.models import UserProfile
@@ -14,6 +22,7 @@ from bag.contexts import bag_contents
 import stripe
 import json
 
+<<<<<<< HEAD
 
 @require_POST
 def cache_checkout_data(request):
@@ -178,6 +187,22 @@ def checkout_success(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
+=======
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, instance=profile)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Profile updated successfully')
+
+    form = UserProfileForm(instance=profile)
+    orders = profile.orders.all()
+
+    template = 'profiles/profile.html'
+    context = {
+        'form': form,
+        'orders': orders,
+        'on_profile_page': True
+>>>>>>> 384bd3250c81a51072fc19b48f90df312af56a99
     }
 
     return render(request, template, context)

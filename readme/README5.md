@@ -98,6 +98,7 @@
         -   update toasts_success.html in line with the profiles success page
         -   update views.py and import messages
 # Profile App - Part 7 & 8
+<<<<<<< HEAD
         -   Add the user profile field to the order admin in the checkout apps admin.py
         -   Add checkout/views.py 
                 -   This is so  we really can find a way to associate the order with the *user's profile* when it's created
@@ -110,3 +111,9 @@
                     Here in the checkout success view. All we need to do is check whether the user is authenticated.
                     re-fill all its fields with the relevant information.
 # Profile App - Part 9 & 10
+=======
+
+# Profile App - Part 9 & 10
+# Profile App - Part 11 & 12
+# Profile App - Part 13 & 14
+>>>>>>> 384bd3250c81a51072fc19b48f90df312af56a99

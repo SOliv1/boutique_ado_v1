@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+.order-history {
+    max-height: 416px; /* height of profile form + submit button */
+    overflow-y: auto;
+}
+
+=======
+>>>>>>> 384bd3250c81a51072fc19b48f90df312af56a99
+>>>>>>> 3a0c8c0d6cbc06323f0e3e51cd019aa092a0da78
 #profile-update-form .form-control {
     color: #000;
 }

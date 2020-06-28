@@ -33,5 +33,7 @@
         That product will be deleted.
         I'm going to make a small change to the add_product view here also
         then change and add links to product.detail and on product.html page
+# Security measures
+        Go to views.py in product and views.py in profiles
 
 

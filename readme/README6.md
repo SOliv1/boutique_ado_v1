@@ -33,7 +33,10 @@
         That product will be deleted.
         I'm going to make a small change to the add_product view here also
         then change and add links to product.detail and on product.html page
-# Security measures
-        Go to views.py in product and views.py in profiles
-
-
+# Security measures and tidy image fields
+        Go to views.py in product and views.py in profiles git commit _m"securing views"
+        Finally tidy the image field in djgango - go to Django github > go to django folder > Forms, then open widgets.py
+        And search for ClearableFileInput then look for and add in widgets.py https://github.com/search?l=HTML&q=ClearableFileinput.html&type=Code
+        Create widget and widget template 
+        then lastly to forms.py and import our custom clearable file widget clas
+# tools  https://www.diffchecker.com/dif

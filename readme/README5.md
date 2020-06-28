@@ -128,6 +128,15 @@ to skip around and make changes much faster
         Re-enable form submission in the stripe elementsJavaScript file. Save and commit as "045 profile part5 update webhookhandler to handle profiles"
 # Product App - Part 1 & 2
         create forms.py in product app
+        add to products views 
+        With the product form ready to go.
+        We can now create a view for store owners to add products to the store.
+        In the product apps views.py, I'll call this view add_product
+        And for now, all it will do is render an empty instance of our form so we can see how it looks.
+        It will use a new template which we'll create in a moment called add_product
+        And will include a context including the product form
+        Now create a new url for it and call it add_product
         
 
-# Product App - Part 3 & 4
+
+        # Product App - Part 3 & 4

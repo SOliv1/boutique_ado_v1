@@ -98,13 +98,33 @@
         -   update toasts_success.html in line with the profiles success page
         -   update views.py and import messages
 # Profile App - Part 7 & 8
-Add the user profile field to the order admin in the checkout apps admin.py - Add checkout/views.py - This is so we really can find a way to associate the order with the user's profile when it's created which happens during the checkout process. 
+Add the user profile field to the order admin in so ththe checkout apps admin.py - Add checkout/views.py - This is so we really can find a way to associate the order with the user's profile when it's created which happens during the checkout process. 
 IMPORTANT! insert this in the views.py checkout: def checkout_success(request, order_number): 
 """ 
 Handle successful checkouts
  """ 
 Here in the checkout success view. All we need to do is check whether the user is authenticated. re-fill all its fields with the relevant information.
-
 # Profile App - Part 9 & 10
+-   Go to webhook handler to update the user authentication experience
+*TIP* to select multiple areas to type at once use:
+ Alt + Click and use END, HOME 
+AND CONTROL LFT/RGHT 
+to skip around and make changes much faster
+-    comment out the form submit(); function(line 111 in checkout/js) so that form will fail then go and test the function. the webhandler should 
+      successfully allow the payment to go through even if the form fails.
+      And we'll never get to the checkout success page.
+        If our code is working though that should be no problem
+        since the webhook handler will catch the payment intent succeeded webhook from
+        stripe and handle everything for us.
+        Even with our form completely broken. Payments still work, and we can see
+        stripe posting to the webhook URL in the terminal.  It will still show in admin
+        profile was attached as expected.
+        In fact even though the checkout page failed.
+        If the user were to come back to their profile. Later on, they'd see it in their order history.
+        Let's re-enable form submission in the stripe elementsJavaScript file.
+        you will see this in admin (go to orders and you will see it has been successfully posted, 
+        and stripe posting to the webhook URL in the terminal that payment has succeeded.
+        Stripe has the payment and it has succeeded in the webhooks on stripe
+        Re-enable form submission in the stripe elementsJavaScript file. Save and commit as "045 profile part5 update webhookhandler to handle profiles"
 # Profile App - Part 11 & 12
 # Profile App - Part 13 & 14

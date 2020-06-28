@@ -136,7 +136,14 @@ to skip around and make changes much faster
         It will use a new template which we'll create in a moment called add_product
         And will include a context including the product form
         Now create a new url for it and call it add_product
+        Add an iteger to it - go to website and test it out then commit 
+        Then go over to views.py in products and  Finish The Add Product Functionality
+
+# Product App - Part 3 & 4
+     Add new products to add_product page 
+     add to views.py in products and success notification tries to render the image with its url.
+        To fix this we can just add a simple if statement around whether to render the image
+        and if it doesn't have one we'll render the default no image.   
+        Also add to toasts_success.html to render the default image if there is no image to avoid throwing an erro.
+        Also go to shopping bag page and fix it there too
         
-
-
-        # Product App - Part 3 & 4

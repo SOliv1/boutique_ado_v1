@@ -126,5 +126,8 @@ to skip around and make changes much faster
         and stripe posting to the webhook URL in the terminal that payment has succeeded.
         Stripe has the payment and it has succeeded in the webhooks on stripe
         Re-enable form submission in the stripe elementsJavaScript file. Save and commit as "045 profile part5 update webhookhandler to handle profiles"
-# Profile App - Part 11 & 12
-# Profile App - Part 13 & 14
+# Product App - Part 1 & 2
+        create forms.py in product app
+        
+
+# Product App - Part 3 & 4

@@ -40,3 +40,24 @@
         Create widget and widget template 
         then lastly to forms.py and import our custom clearable file widget clas
 # tools  https://www.diffchecker.com/dif
+
+# Fixing image field
+-   Add this in *base.css* since it'll be applied on both the edit template
+-   and the add product template.
+-   First we're going to set the overflow of the span wrapped around our file input two hidden.
+-   And give it relative positioning.
+-   Then for the actual input itself, we'll position it absolutely in the top right of the span element
+-   add product template.
+        First we're going to set the overflow of the span wrapped around our file input two hidden.
+        And give it relative positioning.
+        Then for the actual input itself, we'll position it absolutely in the top right of the span element
+        giving it a min-width and height of 100% so it takes up the entire span.
+        Now I'll give it zero opacity so it doesn't cover the button.
+        And turn the cursor into a pointer.
+        Effectively what we're doing here is making sure that the entire
+        input which is clickable lives inside this span that looks like a button.
+        And then making it invisible so it appears you're clicking the button.
+        While I'm here in the CSS I'll also add some fine-tuning for the custom checkbox.
+        update edit and add product.html to update the image field
+    runserver and check to see how it all looks
+    Add javascript to edit and copy to add.html and use *backticks '``'only

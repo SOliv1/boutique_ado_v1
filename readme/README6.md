@@ -61,3 +61,48 @@
         update edit and add product.html to update the image field
     runserver and check to see how it all looks
     Add javascript to edit and copy to add.html and use *backticks '``'only
+
+# Deploying to heroku app
+
+-   Amazon  web services  - 's3' stands for simple storage service
+-   deploy to heroku - go to website and create new project 
+-   go to resources and search postgres and then click that to add the database
+-   To use Postgres we need to 
+            go back to gitpod and 
+            install dj_database_url, 
+            and psycopg2
+
+    `pip3 install dj_database_url`
+    `pip3 install psycopg2-binary`
+    `pip3 freeze > requirements.txt`
+
+    get stores new database setup. By going to *settings.py*
+    and importing *dj_database_url*
+    add to settings - replace default databasewith the following and going to settings in heroku revela vars and copy databse url:
+            "# Database
+# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+#   if 'DATABASE_URL' in os.environ:
+#    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('postgres://bbwkjtasosvyad:a94d0cbfbfec0da1226df9090e480bca9e31d3a588fb0c933905a415db462ee3@ec2-54-247-79-178.eu-west-1.compute.amazonaws.com:5432/dfsgat5es99hd6'))
+    }
+#   else:
+#    DATABASES = {
+#        'default': {
+#            'ENGINE': 'django.db.backends.sqlite3',
+#            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#        }
+#    }
+
+## make migrations and load the data
+-       `manage.py showmigrations`
+        `Python3 manage.py migrate`
+        `python3 manage.py loaddata categories`
+         `python3 manage.py loaddata products`
+        remember it's important to do them in that order because the products
+        depend on the categories already existing
+        `python3 manage.py createsuperuser`
+        Create a superuser to login with
+        uncomment database and remove the postgress url before commit to avoid version control
+        
+
+         

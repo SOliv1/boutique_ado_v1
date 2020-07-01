@@ -103,6 +103,18 @@
         `python3 manage.py createsuperuser`
         Create a superuser to login with
         uncomment database and remove the postgress url before commit to avoid version control
-        
+
+##  deploy to heroku part 2 
+-   replace the database urls after commiting with an if statement - see above
+    -`pip3 install gunicorn`
+-   `pip3 freeze > requirements.txt`
+    -Create *Procfile*
+    - `heroku config:set DISABLE_COLLECT_STATIC`
+    `heroku config:set DISABLE_COLLECT_STATIC=1 --app sjk-boutiqueado`
+Add the hostname of our Heroku app to *allowed hosts in settings.py*
+Save all and commit to git hub before deploying and pushing to heroku
+
+
+
 
          

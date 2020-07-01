@@ -25,6 +25,34 @@ git add .
 git commit -m "initial commit"
 git push
 
+## Python3 manage.py start app home
+mkdir -p home/templates/home
+- right-click the inner home directory, new file and create an index.html
+-   Inside the index.html page, I'm first going to extend the base template with extends base.html
+-   And load the static tag with load static, so we can use static files as needed.
+-   Lastly, we just need a content block with some content in it. So let's start with block content.
+-   And inside that, I'll just add a simple h1 with class equals display-4 and text-success
+-   to ensure bootstrap is working.
+-    add the text it works.
+-    Of course, we need a view to render this template so let's head into views.py
+-    And define an index view.
+-      Which will simply render the index template.
+        And I'll add a docstring here as well.
+-       A view to return the index page.
+-       Next copy our project-level urls.py
+-       Create a new file in the home app, called urls.py
+-       And paste it in to use as a shell
+        And I'm just gonna add one empty path to indicate that this is the route URL.
+        And it's going to render views.index. With the name of home.
+         import views from the current directory here at the top.
+        And save that.
+    -       And now go back to the project level URLs file and include the home URLs.
+        The very last thing we need to do is add the home app to our installed apps in settings.py
+        And wire up our template directories.
+        Add home to installed apps.
+        Add both the route templates directory.
+        Add custom allauth directory to the template dirs setting.
+
 ## Allauth Setup 1
 `pip3 install django-allauth`
 

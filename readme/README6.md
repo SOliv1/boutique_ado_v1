@@ -113,7 +113,8 @@
     `heroku config:set DISABLE_COLLECT_STATIC=1 --app sjk-boutiqueado`
 Add the hostname of our Heroku app to *allowed hosts in settings.py*
 Save all and commit to git hub before deploying and pushing to heroku
-
+        go to https://aws.amazon.com/
+        to set up your free storage structure account to store your images and files
 
 
 

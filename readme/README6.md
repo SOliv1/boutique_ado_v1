@@ -115,7 +115,8 @@ Add the hostname of our Heroku app to *allowed hosts in settings.py*
 Save all and commit to git hub before deploying and pushing to heroku
         go to https://aws.amazon.com/
         to set up your free storage structure account to store your images and files
-
+    pip3 install dj_database_url
+AWS Amazon web services = 
 
 
          

@@ -33,8 +33,10 @@
 1.  special offers
 -   finish, save and include in base.html
 - add mobile views to base.html / run and test in browser
+
 ## Adding products
 `python3 manage.py startapp products`
+
 Add to installed apps in settings.py
 `mkdir products/fixtures`
 

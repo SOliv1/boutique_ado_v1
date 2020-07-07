@@ -128,5 +128,12 @@ Save all and commit to git hub before deploying and pushing to heroku
     pip3 install dj_database_url
 AWS Amazon web services = 
 
+     I had an issue with deploying to my heroku app - it turned out that I had commented out my env.py so my variables were not being read hence aws not being imported and 
+     thus my website not deployed.  Stephen the tutor very kindly pointed this out to me and explained the method of thinking which I have added here for future reference.
+     "All I did was see that your environmental variables were not being read.  Eg - you aws keys weren't being read so the styling was off, so I just presumed they weren't being imported, 
+     so I just checked your import, saw it was commented out and then uncommented it"
+     
+     Thank you Stephen for clarifying this simple error to me and how you found it.  Much appreciated.  A;; good now - yay!!
 
+     
          

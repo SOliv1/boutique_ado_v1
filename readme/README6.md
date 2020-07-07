@@ -83,7 +83,7 @@
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 #   if 'DATABASE_URL' in os.environ:
 #    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('postgres://bbwkjtasosvyad:a94d0cbfbfec0da1226df9090e480bca9e31d3a588fb0c933905a415db462ee3@ec2-54-247-79-178.eu-west-1.compute.amazonaws.com:5432/dfsgat5es99hd6'))
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 #   else:
 #    DATABASES = {
@@ -92,10 +92,20 @@
 #            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #        }
 #    }
+# Deploying heroku app part 2
+
+    We'll just use the free plan for this project.
+    -   To use Postgres we need to go back to gitpod and 
+    `pip3 install dj_database_url`
+    `pip3 install psycopg2-binary`
+    -   Now I can freeze the requirements with 
+    `pip3 freeze > requirements.txt`
+    -And that'll make sure Heroku installs all our apps requirements when we deploy it.
 
 ## make migrations and load the data
--       `manage.py showmigrations`
-        `Python3 manage.py migrate`
+-       `python3 manage.py showmigrations`
+        `python3 manage.py makemigrations`
+        `python3 manage.py migrate`
         `python3 manage.py loaddata categories`
          `python3 manage.py loaddata products`
         remember it's important to do them in that order because the products

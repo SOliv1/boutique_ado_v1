@@ -77,3 +77,52 @@ AWS Amazon web services =
                     -   I'll have them send a verification code via text but you can choose any method you prefer.
                     -   Once you've verified and turned on two-step verification.
 
+                    - new option called app passwords under the signing in to Google heading.
+                            - new option called app passwords under the signing in to Google heading.
+                            -    click that enter my password again if needed.
+                            -   Then on the *app password screen*, select mail for the app.
+                            -   Then under device type, select other and type in Django.
+                            -   Again you can set whatever you want here but I'm doing this just to keep things organized.
+                            -   With that done we'll be given a 16 character password to copy.
+                            -   And then go to the Heroku app to enter it as a config variable.
+                            -   lets call the variable EMAIL_HOST_PASS. And paste it in and click Add.
+                            -    we need another variable here called EMAIL_HOST_USER
+                            -   Which will be set to my Gmail account.
+                            -   last step then is just to add a few 
+                                 *settings to settings.py*
+                            -   Let's follow a similar procedure to our other settings here,
+                            -   where we check if development is in os.environ.
+                            -   To determine which email setup to use.
+                            -   If that variable is set, we'll log emails to the console.
+                            -   the only setting we need to specify is the default from email.
+                            -   i.e.  be boutiqueado@example.com
+                                -Otherwise, for *production* we need to set several variables.
+                                - EMAIL_BACKEND, which will be set to django.core.mail.backends.smpt.EmailBackend
+                                - EMAIL_USE_TLS which will be true
+                                - EMAIL_PORT which will be port 587
+                                - EMAIL_HOST which will be smtp.gmail.com
+                            - then the username, password, and DEFAULT_FROM_EMAIL
+                            all of which will get from the environment.
+                            With that complete all we need to do is finish the set up we just need to deploy to Heroku.
+                            -commit to github - adding all our changes.
+                                                - Committing.
+                                                -  And then issuing a git push
+                            Test it out let's head to our Heroku app. And try to register for an account.
+                            - use a temporary email from tempmail.org
+                            - get the confirmation email which means email is being sent properly.
+                            - And now  veriwe can the account.
+                            And now be  able to login.
+
+## Base CSS, Login & Registration Refactor 
+        Focus mainly on base.css.
+            Where we'll make some adjustments to various font size and layout issues
+            on the smallest mobile screens.
+            And then on the shopping bag page, which currently doesn't have
+            a very mobile-friendly layout.
+            All the CSS we'll add is going to go in the media query at the bottom of base.css here.
+-   fix mobile friendly in media queries for the whole site in base.css
+-   then allauth templates - accounts base.html - fix the col size there 50 % width only on medium and up: `<div class="col-12 col-md-6">`
+-   add link to profile page in the *mobile-top-header.html*
+-    add new list item in the *main-nav.html* just above products.  `display: block. But display: none, on medium and up`
+
+

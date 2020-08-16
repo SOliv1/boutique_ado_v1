@@ -11,14 +11,13 @@ Go to:
     -   js/stripe_elements.js 
     -   and css.check_out.css
 ## exp Part 3
-  - give stripe_elements some functionality with card event listener to check to see if there are any rrors.
+  - give stripe_elements some functionality with card event listener to check to see if there are any errors.
   - if so then it will show on the checkout page - on card errors div we created near the card element on the checkout page.
   - update views.py in checkout with stripe card elemaents and then install `pip3 install stripe`
   - export environment variables
   
-        export STRIPE_PUBLIC_KEY=pk_test_51GtAGjDvyPDUJbikVWyYOumfWpQlZdzXnhDKRPPeNvSX0RTApmHnUmOvnsgpHwaqoUUp5ekqlKl8xxHlcFyKKvVT00WWP5gmou
-        export STRIPE_SECRET_KEY=sk_test_51GtAGjDvyPDUJbikpwurphl2orPFN3yLUIWg7GhBxnGFoyPtIhS1RjlSldLJjsItel7d2OWONC3Yj8uPudKqXpmS00hqKMIbtF
-  - 
+        export STRIPE_PUBLIC_KEY=pk_test_
+        export STRIPE_SECRET_KEY=sk_test_
   if not using gitpod you may need to look up the instructions on setting environemt variables called set on windows for your specific situation.
   - This should also work on OSX and Linux operating systems.  These will not be permanent. And you'll have to re-export them each time you start your workspace
     But if you're using gitpod you can make them permanent by going to your main workspaces page
@@ -64,8 +63,8 @@ Go to:
         This will prevent an error if we manually delete all the line items from an order
         by making sure that this sets the order total to zero instead of none.
     -   add credentials again:
-            export STRIPE_PUBLIC_KEYm=pk_test_51GtAGjDvyPDUJbikVWyYOumfWpQlZdzXnhDKRPPeNvSX0RTApmHnUmOvnsgpHwaqoUUp5ekqlKl8xxHlcFyKKvVT00WWP5gmouy 
-            export STRIPE_SECRET_KEY=sk_test_51GtAGjDvyPDUJbikpwurphl2orPFN3yLUIWg7GhBxnGFoyPtIhS1RjlSldLJjsItel7d2OWONC3Yj8uPudKqXpmS00hqKMIbtF
+            export STRIPE_PUBLIC_KEY=pk_test_
+            export STRIPE_SECRET_KEY=sk_test_
 
                 test card no = 
                 4242424242424242

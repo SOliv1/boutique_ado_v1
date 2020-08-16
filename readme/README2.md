@@ -54,7 +54,8 @@ dry run
 - `python3 manage.py makemigrations`
 -  `python3 manage.py migrate`
     *then*...
--`python3 manage.py loaddata categories`
+-`exit`
+    `python3 manage.py loaddata categories`
 `python3 manage.py loaddata products`
 
 check it out - python3 manage.py runserver - go to admin
@@ -107,6 +108,7 @@ almost identical to the *all products view* so I'll copy that as a base.
     - Add field has_sizes to product
     The above report is technically a bug in django but because it is not critical developers have chosen not to fix it as it could cause other issues along the way.  So it is ok to go ahead and make migrations
 -   `python3 manage.py migrate --plan` to verify the migrations we are making
+    `python3 manage.py makemigrations`
 -   and then `python3 manage.py migrate`
 -   `python3 manage.py shell`
 -   input into the shell for quick 'on the fly' without having to resort to your views.py 
@@ -228,10 +230,11 @@ install django crispy forms to format forms using  bootstrap styling forms autom
     -   go to Stripe docs > then look for `accept payments` here in documentation and click on there.
     -   first thing we need to do to set up stripe elements is to include `stripes javascript`.
     -   then go to check_out.html and add at the bottom: 
-        {% block postloadjs %}
-            {{ block.super }}
-            {{ stripe_public_key|json_script:"id_stripe_public_key" }}    
-            {{ client_secret|json_script:"id_client_secret" }}
-        {% endblock %}
+        `{% block postloadjs %}
+        {{ block.super }}
+        {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+        {{ client_secret|json_script:"id_client_secret" }}
+        <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+        {% endblock %}`
     To show what these do - go to stripe and copy the public key.
 go to page / 3

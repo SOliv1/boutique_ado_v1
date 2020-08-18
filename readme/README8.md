@@ -82,3 +82,13 @@ is to wrap them in parentheses so we can move them down to the next line.
 So you can feel free to choose whether to fix them.
 As long as you ensure these types of warnings don't show up in any projects
 you submit for assessment.
+
+
+## Heroku deployment
+
+`pip3 install boto3`
+`pip3 install django-storages`
+`pip3 freeze > requirements.txt`
+
+
+

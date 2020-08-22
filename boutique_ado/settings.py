@@ -17,10 +17,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get("SECRET_KEY", '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if os.environ.get("DEVELOPMENT"):
-    development = True
-else:
-    development = False
+# if os.environ.get("DEVELOPMENT"):
+#    development = True
+# else:
+#    development = False
+
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = 'DEVELOPMENT' in os.environ
+# DEBUG = True
 
 
 ALLOWED_HOSTS = ['sjk-boutiqueado.herokuapp.com', 'localhost']

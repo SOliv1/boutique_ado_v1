@@ -1,5 +1,11 @@
 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
 
+## view the website here:
+
+https://sjk-boutiqueado.herokuapp.com/
+
+
+
 ## initial set up project 
 `pip3 install django`
 cd /workspace/.pip-modules/lib/python3.8/site-packages/`

@@ -89,6 +89,12 @@ you submit for assessment.
 `pip3 install boto3`
 `pip3 install django-storages`
 `pip3 freeze > requirements.txt`
+======//---
+
+If you are having trouble with login:
+2 factor login:
+heroku login -i
+heroku logs --tail -a sjk-boutiqueado
 
 
 

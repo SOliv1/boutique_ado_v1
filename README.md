@@ -162,4 +162,4 @@ to main core.css block.
 
 [![CodeQL](https://github.com/SOliv1/boutique_ado_v1/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/SOliv1/boutique_ado_v1/actions/workflows/codeql-analysis.yml)
 
-
+[![CodeQL](https://github.com/SOliv1/boutique_ado_v1/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/SOliv1/boutique_ado_v1/actions/workflows/codeql-analysis.yml)

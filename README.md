@@ -7,6 +7,7 @@ https://sjk-boutiqueado.herokuapp.com/
 
 [![CodeQL](https://github.com/SOliv1/boutique_ado_v1/actions/workflows/codeql-analysis.yml/badge.svg)]
 [![Jekyll site CI](https://github.com/SOliv1/boutique_ado_v1/actions/workflows/jekyll.yml/badge.svg)](https://github.com/SOliv1/boutique_ado_v1/actions/workflows/jekyll.yml)
+[![Build Status](https://app.travis-ci.com/SOliv1/boutique_ado_v1.svg?branch=master)](https://app.travis-ci.com/SOliv1/boutique_ado_v1)
 
 ## initial set up project 
 `pip3 install django`
@@ -163,3 +164,4 @@ to main core.css block.
 
 [![Jekyll site CI](https://github.com/SOliv1/boutique_ado_v1/actions/workflows/jekyll.yml/badge.svg)](https://github.com/SOliv1/boutique_ado_v1/actions/workflows/jekyll.yml)
 [![CodeQL](https://github.com/SOliv1/boutique_ado_v1/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/SOliv1/boutique_ado_v1/actions/workflows/codeql-analysis.yml)
+[![Build Status](https://travis-ci.com/SOliv1/boutique_ado_v1.svg?branch=master)](https://travis-ci.com/SOliv1/boutique_ado_v1)
